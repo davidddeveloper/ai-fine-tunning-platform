@@ -1,0 +1,118 @@
+[
+    {
+        "text_input": "Usay di best tem fo plant mangro?",
+        "output": "Di best tem fo plant mangro na dry season en rainy season junction, so di tri go get bɔku wɛta fo grow fayn."
+    },
+    {
+        "text_input": "Usay di best gron fo grow cassava?",
+        "output": "Cassava lek sandy en loamy gron we no too get bɔku wata en no too hard."
+    },
+    {
+        "text_input": "How fo prɛvɛnt pest pan mi rice farm?",
+        "output": "Fo prɛvɛnt pest dem, you fo clean di farm well, use organic pesticide, en plant resistant rice variety."
+    },
+    {
+        "text_input": "Wetin fo do if mi mango dem nor di ripe good?",
+        "output": "Check if di mangro dem bin pick too early. Lef dem pan tri lɛngka, or wrap dem wit banana leaf fo ripen fayn."
+    },
+    {
+        "text_input": "Usay di best tem fo harvest mangro?",
+        "output": "Di best tem fo harvest mangro na wɛn di skin don begin change color en e di pull easy from di tri."
+    },
+    {
+        "text_input": "How fo improve soil fertility?",
+        "output": "You fo use compost, rotate crop dem, en avoid too much chemical fertilizer fo keep di gron healthy."
+    },
+    {
+        "text_input": "Wetin fo do if mi gron dry en no get wɛta?",
+        "output": "You fo practice mulching, dig small trench fo keep wata, en use drought-resistant crop dem."
+    },
+    {
+        "text_input": "How fo stop cut-cut grass (grasscutter) pan mi farm?",
+        "output": "Build fence, set trap dem, en keep di area clean so di animal dem nor go get place fo hide."
+    },
+    {
+        "text_input": "Wetin na organic farming?",
+        "output": "Organic farming na wɛ wi nor di use chemical pesticide en fertilizer, but wi di use natural way dem fo grow food."
+    },
+    {
+        "text_input": "How fo store harvested corn fayn?",
+        "output": "Dry di corn well, keep am na dry place, en use airtight container fo prɛvɛnt insect dem."
+    },
+    {
+        "input_text": "Wetin fo do if mi cassava nor di grow big?",
+        "output_text": "Make sure say di gron loose en get bɛtɛ drainage. Use improved cassava cuttings en avoid planting dem too close."
+    },
+    {
+        "input_text": "How fo grow bɔku tomato?",
+        "output_text": "Plant tomato na well-drained loamy gron, give dem bɔku sunlight, en use organic compost fo bɛtɛ yield."
+    },
+    {
+        "input_text": "Wetin fo do if grasshopper dem di eat mi crop dem?",
+        "output_text": "Use neem leaf spray, encourage bird dem fo eat di insect dem, en hand-pick di grasshopper dem early morning."
+    },
+    {
+        "input_text": "How fo plant groundnut?",
+        "output_text": "Plant groundnut na sandy loam gron, space dem well, en plant during early rainy season fo bɛtɛ result."
+    },
+    {
+        "input_text": "Wetin fo do if mi cocoa di get black pod disease?",
+        "output_text": "Prune di tree, remove infected pod dem quick, en use copper-based fungicide fo prɛvɛnt spread."
+    },
+    {
+        "input_text": "How fo control weed pan mi farm?",
+        "output_text": "Use mulch, weed by hand or use hoe early before dem grow big, en rotate crop dem."
+    },
+    {
+        "input_text": "Wetin na di best way fo store potato?",
+        "output_text": "Store potato na cool, dry place we get good ventilation. Nor wash dem before storage."
+    },
+    {
+        "input_text": "How fo plant banana?",
+        "output_text": "Plant banana sucker na moist gron, space dem well, en water dem bɔku but nor make e soak."
+    },
+    {
+        "input_text": "How climate change di affect farming?",
+        "output_text": "Climate change di cause drought, heavy rain, en new pest dem. Farmers fo use drought-resistant crops en adapt farming practices."
+    },
+    {
+        "input_text": "Wetin fo do if mi pepper plant di dry fast?",
+        "output_text": "Mulch around di plant fo keep moisture, water dem early morning or late evening, en avoid over-exposure to sun."
+    },
+    {
+        "input_text": "How fo bɛtɛ yield fo okro?",
+        "output_text": "Plant okro na well-drained soil, space dem good, en harvest dem early so new pod go grow."
+    },
+    {
+        "input_text": "How fo make compost fo mi farm?",
+        "output_text": "Mix dry leaf, green plant waste, en animal manure inside one pile, turn am every two weeks until e rot good."
+    },
+    {
+        "input_text": "Wetin na di best way fo store palm oil?",
+        "output_text": "Store palm oil na cool, dry place inside airtight container. Avoid direct sunlight fo prɛvɛnt spoilage."
+    },
+    {
+        "input_text": "How fo grow pineapple?",
+        "output_text": "Plant pineapple sucker na sandy loamy gron, give dem bɔku sunlight, en nor water dem too much."
+    },
+    {
+        "input_text": "How fo protect mi rice farm from birds?",
+        "output_text": "Use scarecrow, make noise with tin can dem, en cover di rice with net fo protect am."
+    },
+    {
+        "input_text": "Wetin na di sign say corn don ready fo harvest?",
+        "output_text": "Di husk go begin dry, di silk go turn brown, en if you press di corn grain e go hard small."
+    },
+    {
+        "input_text": "How fo bɛtɛ di quality of palm kernel oil?",
+        "output_text": "Use fresh palm kernel, dry dem well before processing, en avoid contamination with dirt."
+    },
+    {
+        "input_text": "How fo prɛvɛnt soil erosion pan mi farm?",
+        "output_text": "Use contour farming, plant grass strip dem, en nor over-cultivate di land."
+    },
+    {
+        "input_text": "How fo preserve mango fo long tem?",
+        "output_text": "Dry di mango slice dem, or store fresh one inside fridge inside plastic container."
+    }
+]
