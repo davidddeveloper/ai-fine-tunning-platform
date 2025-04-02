@@ -1,9 +1,11 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Bot, Cpu, Database, Layers, Sparkles } from "lucide-react"
+import { ToastProvider } from "@/components/ui/toast";
 
 export default function Home() {
   return (
+    <ToastProvider>
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-16 flex items-center border-b">
         <Link className="flex items-center justify-center gap-2" href="#">
@@ -125,6 +127,7 @@ export default function Home() {
         </nav>
       </footer>
     </div>
+    </ToastProvider>
   )
 }
 

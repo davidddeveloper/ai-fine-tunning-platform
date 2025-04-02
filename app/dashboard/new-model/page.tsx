@@ -15,6 +15,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
+import { readFile } from "fs"
 
 export default function NewModelPage() {
   const [modelName, setModelName] = useState("")
@@ -34,14 +35,16 @@ export default function NewModelPage() {
     }
   }
 
-  const parseTrainingData = () => {
+  const parseTrainingData = async () => {
     try {
       if (trainingMethod === "paste") {
         return JSON.parse(trainingData)
       } else if (file) {
         // In a real app, you'd read and parse the file
         // For now, we'll just return an empty array
-        return []
+        const fileText = await file.text()
+        return JSON.parse(fileText)
+
       }
       return []
     } catch (error) {
@@ -68,7 +71,7 @@ export default function NewModelPage() {
         return
       }
 
-      const trainingDataParsed = parseTrainingData()
+      const trainingDataParsed = await parseTrainingData()
       if (!trainingDataParsed) {
         setLoading(false)
         return

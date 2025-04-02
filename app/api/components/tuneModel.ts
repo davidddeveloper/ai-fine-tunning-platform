@@ -1,7 +1,7 @@
 import createTunedModel from './createTunedModel';
 import monitorTuningJob from './monitorTuningJob';
 
-const model = async (modelInfo: {modelName: string, type: string}): Promise<string | boolean> => {
+const model = async (modelInfo: {modelName: string, type: string, trainingData: []}): Promise<string | boolean> => {
     try {
         const operationId = await createTunedModel(modelInfo);
         const result = await monitorTuningJob(operationId);

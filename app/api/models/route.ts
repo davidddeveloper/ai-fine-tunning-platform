@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Create a tuned model
-    const modelInfo = { modelName: name, type }
+    const modelInfo = { modelName: name, type, trainingData }
     const tunedModel = await model(modelInfo)
 
     if (!tunedModel) {

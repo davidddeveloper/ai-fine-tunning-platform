@@ -12,6 +12,10 @@ export async function POST(req: NextRequest) {
       data: { session },
     } = await supabase.auth.getSession()
 
+    const { data: models, error } = await supabase.from("models").select("*")
+
+    console.log(models)
+
     if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
     }

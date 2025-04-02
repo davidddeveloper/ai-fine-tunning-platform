@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 //import fetch from 'node-fetch';
-import TrainingData from '@/data/trainingData';
-import ClassificationData from '@/data/classificationData';
+//import TrainingData from '@/data/trainingData';
+//import ClassificationData from '@/data/classificationData';
 
 interface CreateTunedModelRequest {
     display_name: string;
@@ -21,13 +21,8 @@ interface CreateTunedModelRequest {
 }
 
 
-async function createTunedModel(modelInfo: {modelName: string, type: string}): Promise<string> {
-    let trainingData = TrainingData()
-
-    if (modelInfo.type === 'classify') {
-        trainingData = ClassificationData()
-    }
-
+async function createTunedModel(modelInfo: {modelName: string, type: string, trainingData: []}): Promise<string> {
+   
     const requestBody: CreateTunedModelRequest = {
         display_name: modelInfo.modelName,
         base_model: "models/gemini-1.5-flash-001-tuning",
@@ -39,11 +34,13 @@ async function createTunedModel(modelInfo: {modelName: string, type: string}): P
             },
             training_data: {
                 examples: {
-                    examples: trainingData,
+                    examples: modelInfo.trainingData,
                 },
             },
         },
     };
+
+    console.log('this is the TRAINING DATA', modelInfo.trainingData)
 
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/tunedModels?key=${process.env.GEMINI_API_KEY}`, {
         method: 'POST',

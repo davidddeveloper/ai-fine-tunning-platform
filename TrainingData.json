@@ -40,79 +40,203 @@
         "output": "Dry di corn well, keep am na dry place, en use airtight container fo prɛvɛnt insect dem."
     },
     {
-        "input_text": "Wetin fo do if mi cassava nor di grow big?",
-        "output_text": "Make sure say di gron loose en get bɛtɛ drainage. Use improved cassava cuttings en avoid planting dem too close."
+        "text_input": "Wetin fo do if mi cassava nor di grow big?",
+        "output": "Make sure say di gron loose en get bɛtɛ drainage. Use improved cassava cuttings en avoid planting dem too close."
     },
     {
-        "input_text": "How fo grow bɔku tomato?",
-        "output_text": "Plant tomato na well-drained loamy gron, give dem bɔku sunlight, en use organic compost fo bɛtɛ yield."
+        "text_input": "How fo grow bɔku tomato?",
+        "output": "Plant tomato na well-drained loamy gron, give dem bɔku sunlight, en use organic compost fo bɛtɛ yield."
     },
     {
-        "input_text": "Wetin fo do if grasshopper dem di eat mi crop dem?",
-        "output_text": "Use neem leaf spray, encourage bird dem fo eat di insect dem, en hand-pick di grasshopper dem early morning."
+        "text_input": "Wetin fo do if grasshopper dem di eat mi crop dem?",
+        "output": "Use neem leaf spray, encourage bird dem fo eat di insect dem, en hand-pick di grasshopper dem early morning."
     },
     {
-        "input_text": "How fo plant groundnut?",
-        "output_text": "Plant groundnut na sandy loam gron, space dem well, en plant during early rainy season fo bɛtɛ result."
+        "text_input": "How fo plant groundnut?",
+        "output": "Plant groundnut na sandy loam gron, space dem well, en plant during early rainy season fo bɛtɛ result."
     },
     {
-        "input_text": "Wetin fo do if mi cocoa di get black pod disease?",
-        "output_text": "Prune di tree, remove infected pod dem quick, en use copper-based fungicide fo prɛvɛnt spread."
+        "text_input": "Wetin fo do if mi cocoa di get black pod disease?",
+        "output": "Prune di tree, remove infected pod dem quick, en use copper-based fungicide fo prɛvɛnt spread."
     },
     {
-        "input_text": "How fo control weed pan mi farm?",
-        "output_text": "Use mulch, weed by hand or use hoe early before dem grow big, en rotate crop dem."
+        "text_input": "How fo control weed pan mi farm?",
+        "output": "Use mulch, weed by hand or use hoe early before dem grow big, en rotate crop dem."
     },
     {
-        "input_text": "Wetin na di best way fo store potato?",
-        "output_text": "Store potato na cool, dry place we get good ventilation. Nor wash dem before storage."
+        "text_input": "Wetin na di best way fo store potato?",
+        "output": "Store potato na cool, dry place we get good ventilation. Nor wash dem before storage."
     },
     {
-        "input_text": "How fo plant banana?",
-        "output_text": "Plant banana sucker na moist gron, space dem well, en water dem bɔku but nor make e soak."
+        "text_input": "How fo plant banana?",
+        "output": "Plant banana sucker na moist gron, space dem well, en water dem bɔku but nor make e soak."
     },
     {
-        "input_text": "How climate change di affect farming?",
-        "output_text": "Climate change di cause drought, heavy rain, en new pest dem. Farmers fo use drought-resistant crops en adapt farming practices."
+        "text_input": "How climate change di affect farming?",
+        "output": "Climate change di cause drought, heavy rain, en new pest dem. Farmers fo use drought-resistant crops en adapt farming practices."
     },
     {
-        "input_text": "Wetin fo do if mi pepper plant di dry fast?",
-        "output_text": "Mulch around di plant fo keep moisture, water dem early morning or late evening, en avoid over-exposure to sun."
+        "text_input": "Wetin fo do if mi pepper plant di dry fast?",
+        "output": "Mulch around di plant fo keep moisture, water dem early morning or late evening, en avoid over-exposure to sun."
     },
     {
-        "input_text": "How fo bɛtɛ yield fo okro?",
-        "output_text": "Plant okro na well-drained soil, space dem good, en harvest dem early so new pod go grow."
+        "text_input": "How fo bɛtɛ yield fo okro?",
+        "output": "Plant okro na well-drained soil, space dem good, en harvest dem early so new pod go grow."
     },
     {
-        "input_text": "How fo make compost fo mi farm?",
-        "output_text": "Mix dry leaf, green plant waste, en animal manure inside one pile, turn am every two weeks until e rot good."
+        "text_input": "How fo make compost fo mi farm?",
+        "output": "Mix dry leaf, green plant waste, en animal manure inside one pile, turn am every two weeks until e rot good."
     },
     {
-        "input_text": "Wetin na di best way fo store palm oil?",
-        "output_text": "Store palm oil na cool, dry place inside airtight container. Avoid direct sunlight fo prɛvɛnt spoilage."
+        "text_input": "Wetin na di best way fo store palm oil?",
+        "output": "Store palm oil na cool, dry place inside airtight container. Avoid direct sunlight fo prɛvɛnt spoilage."
     },
     {
-        "input_text": "How fo grow pineapple?",
-        "output_text": "Plant pineapple sucker na sandy loamy gron, give dem bɔku sunlight, en nor water dem too much."
+        "text_input": "How fo grow pineapple?",
+        "output": "Plant pineapple sucker na sandy loamy gron, give dem bɔku sunlight, en nor water dem too much."
     },
     {
-        "input_text": "How fo protect mi rice farm from birds?",
-        "output_text": "Use scarecrow, make noise with tin can dem, en cover di rice with net fo protect am."
+        "text_input": "How fo protect mi rice farm from birds?",
+        "output": "Use scarecrow, make noise with tin can dem, en cover di rice with net fo protect am."
     },
     {
-        "input_text": "Wetin na di sign say corn don ready fo harvest?",
-        "output_text": "Di husk go begin dry, di silk go turn brown, en if you press di corn grain e go hard small."
+        "text_input": "Wetin na di sign say corn don ready fo harvest?",
+        "output": "Di husk go begin dry, di silk go turn brown, en if you press di corn grain e go hard small."
     },
     {
-        "input_text": "How fo bɛtɛ di quality of palm kernel oil?",
-        "output_text": "Use fresh palm kernel, dry dem well before processing, en avoid contamination with dirt."
+        "text_input": "How fo bɛtɛ di quality of palm kernel oil?",
+        "output": "Use fresh palm kernel, dry dem well before processing, en avoid contamination with dirt."
     },
     {
-        "input_text": "How fo prɛvɛnt soil erosion pan mi farm?",
-        "output_text": "Use contour farming, plant grass strip dem, en nor over-cultivate di land."
+        "text_input": "How fo prɛvɛnt soil erosion pan mi farm?",
+        "output": "Use contour farming, plant grass strip dem, en nor over-cultivate di land."
     },
     {
-        "input_text": "How fo preserve mango fo long tem?",
-        "output_text": "Dry di mango slice dem, or store fresh one inside fridge inside plastic container."
+        "text_input": "How fo preserve mango fo long tem?",
+        "output": "Dry di mango slice dem, or store fresh one inside fridge inside plastic container."
+    },
+    {
+        "text_input": "How fo prepare gron before planting?",
+        "output": "Clear di bush, dig di gron, mix am wit compost, en level am good before you plant."
+    },
+    {
+        "text_input": "Wetin fo use fo make di gron rich?",
+        "output": "Use animal manure, compost, en green leaf mulch fo add nutrient na di gron."
+    },
+    {
+        "text_input": "How fo know if gron dry too much?",
+        "output": "If di gron crack, plant dem nor di grow well, en e di feel too hard wɛn you dig, den e dry."
+    },
+    {
+        "text_input": "How fo water plant during dry season?",
+        "output": "Use drip irrigation, water di plant early morning en late evening, en use mulch fo keep moisture."
+    },
+    {
+        "text_input": "Wetin na di best crop fo plant during rainy season?",
+        "output": "Rice, corn, cassava, groundnut, en okro dem grow fine na rainy season."
+    },
+    {
+        "text_input": "How fo stop rat pan mi farm?",
+        "output": "Use trap, keep di farm clean, en plant mint or other strong smell plant dem we rat nor lek."
+    },
+    {
+        "text_input": "How fo take care of goat dem?",
+        "output": "Give dem dry place fo sleep, feed dem wit grass en maize, en give dem clean wata all tem."
+    },
+    {
+        "text_input": "How fo prevent cow dem from sick?",
+        "output": "Give dem vaccination, keep dem inside clean place, en avoid too much insect na di area."
+    },
+    {
+        "text_input": "Wetin fo do if mi plant dem di get yellow leaf?",
+        "output": "Check if e lack nitrogen, add organic fertilizer, en nor over-water di plant dem."
+    },
+    {
+        "text_input": "How fo grow coconut?",
+        "output": "Plant coconut seedling na sandy soil, keep am na place we get bɔku sunlight, en water am well."
+    },
+    {
+        "text_input": "Wetin fo do if mi palm tree nor di bear fruit?",
+        "output": "Check if e get enough sunlight, clear bush around am, en add potassium-rich fertilizer."
+    },
+    {
+        "text_input": "How fo plant sugarcane?",
+        "output": "Cut healthy sugarcane stem, plant am inside moist gron, en water am regular."
+    },
+    {
+        "text_input": "How fo protect mi cassava from pest?",
+        "output": "Plant resistant variety, use neem leaf spray, en remove infected leaf dem quick."
+    },
+    {
+        "text_input": "Wetin fo do if mi chicken dem di die plenty?",
+        "output": "Check if dem get enough clean wata, good food, en vaccinate dem against common disease dem."
+    },
+    {
+        "text_input": "How fo store beans fo long tem?",
+        "output": "Dry di beans well, store dem na airtight container, en add dry pepper fo keep insect away."
+    },
+    {
+        "text_input": "Wetin na di best crop fo plant fo dry season?",
+        "output": "Pepper, tomato, onion, en cassava kin grow fine if dem get enough wata."
+    },
+    {
+        "text_input": "How fo prepare pepper seed before planting?",
+        "output": "Soak di seed dem na warm wata fo some hour, dry dem, en plant dem na nursery before transplant."
+    },
+    {
+        "text_input": "How fo store dry fish fo long tem?",
+        "output": "Keep am inside dry place, use salt fo preserve am, en store am inside airtight container."
+    },
+    {
+        "text_input": "How fo bɛtɛ di yield fo yam?",
+        "output": "Plant big healthy yam seed, keep di gron loose, en cover di root good wit soil."
+    },
+    {
+        "text_input": "Wetin fo do if mi cocoa farm di get too much insect?",
+        "output": "Use organic insecticide, remove damaged pod dem, en plant insect-repellent tree dem near di farm."
+    },
+    {
+        "text_input": "How fo grow watermelon?",
+        "output": "Plant watermelon seed na loose sandy gron, give dem bɔku sunlight, en water dem regular."
+    },
+    {
+        "text_input": "How fo protect orange tree from disease?",
+        "output": "Prune di tree regular, use natural pesticide, en plant disease-resistant variety."
+    },
+    {
+        "text_input": "How fo know say di gron ready fo planting?",
+        "output": "Di gron fo soft, rich inside organic matter, en nor fo hold too much wata."
+    },
+    {
+        "text_input": "How fo prepare land fo rice farming?",
+        "output": "Clear di bush, level di gron, make small small canal dem fo drainage, en wait fo rain."
+    },
+    {
+        "text_input": "How fo store palm kernel?",
+        "output": "Keep dem na dry, well-ventilated place, en nor store dem where e go get moisture."
+    },
+    {
+        "text_input": "How fo raise healthy pig dem?",
+        "output": "Give dem clean wata, good shelter, en proper food like maize en cassava peel."
+    },
+    {
+        "text_input": "How fo protect pineapple from pest?",
+        "output": "Use ash or neem spray, remove affected plant dem early, en plant dem wit enough spacing."
+    },
+    {
+        "text_input": "How fo know if mi chicken get disease?",
+        "output": "If di chicken nor di eat, e eye dem red, e di weak, or e di get running nose, e fit sick."
+    },
+    {
+        "text_input": "How fo harvest cocoa?",
+        "output": "Use sharp knife fo cut di ripe pod, open am careful, en dry di seed before storage."
+    },
+    {
+        "text_input": "How fo store maize fo long tem?",
+        "output": "Dry di maize good, store inside sack, en keep am na place we air di blow fine."
+    },
+    {
+        "text_input": "How fo keep mi goat dem strong?",
+        "output": "Give dem enough food, make sure dem get space fo waka, en give dem vaccination."
     }
 ]
