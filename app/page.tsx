@@ -13,13 +13,13 @@ export default function Home() {
           <span className="font-bold">AI Tuner</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          {/*<Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
             Features
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
             Pricing
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          </Link>*/}
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#how-it-works">
             About
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/login">
@@ -67,7 +67,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
