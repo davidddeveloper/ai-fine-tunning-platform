@@ -119,7 +119,7 @@ export default function DashboardPage() {
           const usageWithNames =
             modelUsageData?.map((item) => ({
               model_id: item.model_id,
-              model_name: item.models.name,
+              model_name: item.models && item.models[0] ? item.models[0].name : null,
               request_count: item.request_count,
               limit: 250, // Assuming a fixed limit of 250 calls per model
             })) || []
