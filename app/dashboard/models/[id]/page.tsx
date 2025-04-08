@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
@@ -18,6 +19,7 @@ interface Model {
   name: string
   type: string
   status: string
+  progress: number
   created_at: string
   tuned_model_id: string
   base_model: string
@@ -60,6 +62,43 @@ export default function ModelDetailPage() {
     fetchModel()
   }, [modelId, supabase, toast])
 
+  // Poll for status updates if the model is training
+  useEffect(() => {
+    if (!model || model.status !== "training") return
+
+    const intervalId = setInterval(async () => {
+      try {
+        const response = await fetch(`/api/models/${modelId}/status`)
+        if (!response.ok) throw new Error("Failed to fetch status")
+
+        const data = await response.json()
+
+        if (data.status !== model.status || data.progress !== model.progress) {
+          setModel((prev) => (prev ? { ...prev, status: data.status, progress: data.progress } : null))
+
+          if (data.status === "ready") {
+            toast({
+              title: "Training complete",
+              description: "Your model is now ready to use",
+            })
+            clearInterval(intervalId)
+          } else if (data.status === "failed") {
+            toast({
+              variant: "destructive",
+              title: "Training failed",
+              description: "There was an error training your model",
+            })
+            clearInterval(intervalId)
+          }
+        }
+      } catch (error) {
+        console.error("Error polling status:", error)
+      }
+    }, 10000) // Poll every 10 seconds
+
+    return () => clearInterval(intervalId)
+  }, [model, modelId, toast])
+
   const copyApiUrl = () => {
     navigator.clipboard.writeText(apiUrl)
     setCopied(true)
@@ -90,6 +129,7 @@ export default function ModelDetailPage() {
         body: JSON.stringify({
           modelId: model?.tuned_model_id,
           input: testInput,
+          trackUsage: true, // Track this usage
         }),
       })
 
@@ -125,12 +165,8 @@ export default function ModelDetailPage() {
 
       const data = await response.json()
 
-      // Update model status
-      const { error } = await supabase.from("models").update({ status: data.status }).eq("id", model.id)
-
-      if (error) throw error
-
-      setModel({ ...model, status: data.status })
+      // Update model status and progress
+      setModel({ ...model, status: data.status, progress: data.progress })
 
       toast({
         title: "Status updated",
@@ -216,6 +252,16 @@ export default function ModelDetailPage() {
                 </div>
               </div>
 
+              {model.status === "training" && (
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <p className="text-sm font-medium">Training Progress</p>
+                    <p className="text-sm text-muted-foreground">{Math.round(model.progress)}%</p>
+                  </div>
+                  <Progress value={model.progress} className="h-2" />
+                </div>
+              )}
+
               <div>
                 <p className="text-sm font-medium">Base Model</p>
                 <p className="text-sm text-muted-foreground mt-1">{model.base_model}</p>
@@ -270,7 +316,9 @@ export default function ModelDetailPage() {
                 <div className="flex items-center justify-center p-4 rounded-md bg-muted">
                   <Bot className="h-4 w-4 mr-2 text-muted-foreground" />
                   <span className="text-sm text-muted-foreground">
-                    Model is still {model.status}. Testing will be available when ready.
+                    {model.status === "training"
+                      ? `Model is training (${Math.round(model.progress)}% complete). Testing will be available when ready.`
+                      : `Model is ${model.status}. Testing will be available when ready.`}
                   </span>
                 </div>
               )}
@@ -334,4 +382,3 @@ print(data["output"])`}
     </DashboardLayout>
   )
 }
-

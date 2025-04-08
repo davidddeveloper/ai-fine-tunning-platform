@@ -28,7 +28,7 @@ async function createTunedModel(modelInfo: {modelName: string, type: string, tra
         base_model: "models/gemini-1.5-flash-001-tuning",
         tuning_task: {
             hyperparameters: {
-                batch_size: 4,
+                batch_size: 5,
                 learning_rate: 0.001,
                 epoch_count: 5,
             },

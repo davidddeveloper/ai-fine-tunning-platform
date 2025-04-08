@@ -93,13 +93,6 @@ export default function NewModelPage() {
 
       if (!response.ok) {
         const error = await response.json()
-        const { error: updateError } = await supabase
-          .from("models")
-          .update({ status: "failed" })
-          .eq("name", modelName)
-          .eq("user_id", session.user.id)
-
-        if (updateError) console.error("Error updating model status:", updateError)
         throw new Error(error.message || "Failed to create model")
       }
 
@@ -110,12 +103,21 @@ export default function NewModelPage() {
         name: modelName,
         type: modelType,
         base_model: baseModel,
-        status: "ready",
+        status: "training",
         tuned_model_id: result.tuned_model,
         user_id: session.user.id,
       })
 
       if (error) throw error
+      else {
+        const { error } = await supabase
+          .from("models")
+          .update({
+            status: "ready",
+          })
+          .eq("user_id", session.user.id)
+          .eq("name", modelName)
+      }
 
       toast({
         title: "Model created",
