@@ -1,7 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs"
 import { cookies } from "next/headers"
-import model from "@/app/api/components/tuneModel"
 
 export async function POST(req: NextRequest) {
   try {
@@ -22,18 +21,43 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
-    // Create a tuned model
-    const modelInfo = { modelName: name, type, trainingData }
-    const tunedModel = await model(modelInfo)
+    // Create a job record in the database
+    const { data: job, error: jobError } = await supabase
+      .from("model_jobs")
+      .insert({
+        name,
+        type,
+        base_model: baseModel,
+        status: "queued",
+        user_id: session.user.id,
+        training_data: trainingData,
+      })
+      .select()
+      .single()
 
-    if (!tunedModel) {
-      return NextResponse.json({ error: "Failed to create model" }, { status: 500 })
+    if (jobError) {
+      throw jobError
     }
 
-    return NextResponse.json({ tuned_model: tunedModel })
+    // Trigger the background job processing
+    // This is a non-blocking call that will return immediately
+    fetch(`${req.nextUrl.origin}/api/jobs/process`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ jobId: job.id }),
+    }).catch((error) => {
+      console.error("Error triggering job processing:", error)
+    })
+
+    return NextResponse.json({
+      message: "Model training job queued successfully",
+      job_id: job.id,
+    })
   } catch (error: any) {
-    console.error("Error creating model:", error)
-    return NextResponse.json({ error: error.message || "Failed to create model" }, { status: 500 })
+    console.error("Error creating model job:", error)
+    return NextResponse.json({ error: error.message || "Failed to create model job" }, { status: 500 })
   }
 }
 
@@ -67,4 +91,3 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: error.message || "Failed to fetch models" }, { status: 500 })
   }
 }
-

@@ -15,7 +15,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
-import { readFile } from "fs"
 
 export default function NewModelPage() {
   const [modelName, setModelName] = useState("")
@@ -40,11 +39,8 @@ export default function NewModelPage() {
       if (trainingMethod === "paste") {
         return JSON.parse(trainingData)
       } else if (file) {
-        // In a real app, you'd read and parse the file
-        // For now, we'll just return an empty array
         const fileText = await file.text()
         return JSON.parse(fileText)
-
       }
       return []
     } catch (error) {
@@ -77,7 +73,7 @@ export default function NewModelPage() {
         return
       }
 
-      // Call your API to create a new model
+      // Call your API to create a new model job
       const response = await fetch("/api/models", {
         method: "POST",
         headers: {
@@ -98,30 +94,9 @@ export default function NewModelPage() {
 
       const result = await response.json()
 
-      // Save model info to Supabase
-      const { error } = await supabase.from("models").insert({
-        name: modelName,
-        type: modelType,
-        base_model: baseModel,
-        status: "training",
-        tuned_model_id: result.tuned_model,
-        user_id: session.user.id,
-      })
-
-      if (error) throw error
-      else {
-        const { error } = await supabase
-          .from("models")
-          .update({
-            status: "ready",
-          })
-          .eq("user_id", session.user.id)
-          .eq("name", modelName)
-      }
-
       toast({
-        title: "Model created",
-        description: "Your model is now being trained",
+        title: "Model queued for training",
+        description: "Your model will be trained in the background. You can check its status in the models page.",
       })
 
       router.push("/dashboard/models")
@@ -246,4 +221,3 @@ export default function NewModelPage() {
     </DashboardLayout>
   )
 }
-
