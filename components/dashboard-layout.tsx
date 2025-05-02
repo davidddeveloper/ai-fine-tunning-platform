@@ -72,15 +72,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         </nav>
       </header>
       <div className="flex flex-1">
-        <aside className="w-full md:w-[250px] border-r bg-muted/40">
-          <details
-            className="grid gap-2 p-4 text-sm"
-            open={pathname === "/dashboard" || pathname === "/dashboard/models" || pathname === "/dashboard/new-model" || pathname === "/dashboard/settings"}
-          >
-            <summary className="flex items-center gap-2 rounded-lg px-3 py-2 bg-accent text-accent-foreground">
-              <Bot className="h-4 w-4" />
-              Menu
-            </summary>
+        <aside className="w-[50px] sm:w-[150px] md:w-[250px] border-r bg-muted/40 hidden md:block">
+          <nav className="grid gap-2 p-4 text-sm">
             <Link
               href="/dashboard"
               className={`flex items-center gap-2 rounded-lg px-3 py-2 ${
@@ -125,7 +118,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               <Settings className="h-4 w-4" />
               Settings
             </Link>
-          </details>
+          </nav>
         </aside>
         <main className="flex-1 p-4 md:p-6">{children}</main>
       </div>
