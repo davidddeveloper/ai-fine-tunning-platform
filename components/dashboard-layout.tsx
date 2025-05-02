@@ -83,7 +83,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               }`}
             >
               <Home className="h-4 w-4" />
+              <span className="hidden sm:inline-block">
+
               Dashboard
+              </span>
             </Link>
             <Link
               href="/dashboard/models"
@@ -94,7 +97,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               }`}
             >
               <Bot className="h-4 w-4" />
+              <span className="hidden sm:inline-block">
+
               My Models
+              </span>
             </Link>
             <Link
               href="/dashboard/new-model"
@@ -105,7 +111,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               }`}
             >
               <Plus className="h-4 w-4" />
+              <span className="hidden sm:inline-block">
+
               New Model
+
+              </span>
             </Link>
             <Link
               href="/dashboard/settings"
@@ -116,7 +126,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               }`}
             >
               <Settings className="h-4 w-4" />
+
+              <span className="hidden sm:inline-block">
               Settings
+
+              </span>
             </Link>
           </nav>
         </aside>
