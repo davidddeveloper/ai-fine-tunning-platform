@@ -72,7 +72,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         </nav>
       </header>
       <div className="flex flex-1">
-        <aside className="w-[250px] border-r bg-muted/40 hidden md:block">
+        <aside className="w-full md:w-[250px] border-r bg-muted/40">
           <nav className="grid gap-2 p-4 text-sm">
             <Link
               href="/dashboard"
